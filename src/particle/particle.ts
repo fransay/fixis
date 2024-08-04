@@ -3,10 +3,11 @@
 export class Particle{
     mass: number;
     speed: number;
+    size: number[];
 
-    constructor(mass: number,  speed: number){
-        this.mass = mass
-        this.speed = speed
-    }
-
+    constructor(mass: number, speed: number, size: number[]){
+        this.mass = mass;
+        this.speed = speed;
+        this.size = size
+    };
 }
