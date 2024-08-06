@@ -1,6 +1,6 @@
 
-class Vector{
-    elements: number[]
+export class Vector{
+    private elements: number[]
     constructor(elements: number[]){
         this.elements = elements
     }
