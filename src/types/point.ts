@@ -7,10 +7,6 @@ export class Point2D{
         this.y = y
     }
     
-    /**
-     * 
-     * @returns {string} `x``y` as a string representation 
-     */
     toString(){
         return `${this.x}, ${this.y}`;
     }
@@ -27,11 +23,6 @@ export class Point3D{
         this.z = z
     }
 
-
-    /**
-     * 
-     * @returns {string}`x``y``z` as a string representation
-     */
     toString(){
         return `${this.x}, ${this.y}, ${this.z}`
     }

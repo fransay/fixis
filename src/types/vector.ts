@@ -17,7 +17,19 @@ export class Vector{
         return summedVector;
     }
 
-    // Multiply self vector by scalar :: dot product in effect
+    // Subtract
+    subtract(vector: number[]): number[]{
+        let summedVector: number[] = [];
+        if (vector.length != this.elements.length){
+            throw new Error("Vector dimensions don't match!")
+        }
+        for (let i=0; i<=vector.length; i++){
+            summedVector.push(vector[i] - this.elements[i])
+        }
+        return summedVector;
+    }
+
+    // Multiply self.vector by scalar :: dot product in effect
     multiply(scalar: number){
         let scaledVector: number[] = [];
         for (let i=0; i<=this.elements.length; i++){
@@ -26,10 +38,8 @@ export class Vector{
         return scaledVector;
     }
 
-    // Norm of a vector
-    norm(){
-        return this.elements.length;
-    }
+    // Norm or length of a vector
+    norm(){return this.elements.length;}
 
     // Normalise the vector( make it a unit vector)
     normalise(){
@@ -39,7 +49,5 @@ export class Vector{
     }
 
     // String representation of any vector
-    toString(){
-        return `${this.elements.toString}`
-    }
+    toString(){return `${this.elements.toString()}`}
 }

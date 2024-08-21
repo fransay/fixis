@@ -4,8 +4,7 @@ test("Point types", ()=>{
     let pointOne = new Point2D(2, 4);
     let pointTwo = new Point2D(5, 6);
 
-    if (pointOne.toString() != "2, 4"){
-        // raise an error with the testing..
-    }
+    expect(pointOne.toString).toBe("2, 4");
+    expect(pointTwo.toString).toBe("5, 6");
     
 });

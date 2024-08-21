@@ -1,46 +1,39 @@
 
-// Position is a concept of relatively, always defined with
-// a start and now point in a spectrum.
+// Position is defined in a two-dimensional cartesian coordinate system
+import {Point2D} from "../../types/point";
+
 export class Position{
-    private start: number;
-    private terminal: number;
-    public mid: number;
+    private x: number;
+    private y: number;
+    private ref: Point2D = new Point2D(0,0);
 
-    constructor(start: number, terminal: number){
-        this.start = start;
-        this.terminal = terminal;
-        this.mid = (terminal - start) / 2 
+    constructor(x: number, y: number, ref: Point2D) {
+        this.x = x;
+        this.y = y;
+        this.ref = ref;
     }
 
-    /**
-     * @returns start value set at object initialisation
-     */
-    get getStart(){
-        return this.start;
+    get getX(){
+        return this.x;
     }
 
-    /**
-     * @returns terminal value set at object initialisation
-     */
-    get getTerminal(){
-        return this.terminal;
+    get getY(){
+        return this.y;
     }
 
-    /**
-     * Set a new start point
-     * @param newStar is a new start value
-     * @return never
-     */
-    set newStart(newStart: number){
-        this.start = newStart;
+    set setX(newX: number){
+        this.x = newX;
     }
 
-    /**
-     * Set a new terminal point
-     * @param newTerminal is a new terminal value
-     * @returns never 
-     */
-    set newTerminal(newTerminal: number){
-        this.terminal = newTerminal;
+    set setY(newY: number){
+        this.y = newY;
+    }
+
+    public distance(other: Position){
+        return Math.sqrt(Math.pow(this.x - other.x, 2) + Math.pow(this.y - other.y, 2));
+    }
+
+    public distanceFromReference(){
+        return Math.sqrt(Math.pow(this.x - this.ref.x, 2) + Math.pow(this.y - this.ref.y, 2));
     }
 }

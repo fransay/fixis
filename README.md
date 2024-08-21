@@ -1,2 +1,2 @@
-# fixis
-advanced physics library for all in typescript
+# fixis  
+Advanced physics library for all in typescript

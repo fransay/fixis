@@ -13,6 +13,14 @@ class Time{
     get getTime(){
         return this.time;
     }
+
+    set newTime(newTime: number){
+        this.time = newTime;
+    }
+
+    set newUnits(newUnits: TimeUnits){
+        this.units = newUnits;
+    }
 }
 
 export default Time;
