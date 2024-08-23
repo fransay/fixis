@@ -1,10 +1,11 @@
-// 2 dimensional point type
+
+
 export class Point2D{
     x: number;
     y: number;
     constructor(x: number, y:number){
-        this.x = x,
-        this.y = y
+        this.x = x;
+        this.y = y;
     }
     
     toString(){
@@ -18,9 +19,9 @@ export class Point3D{
     y: number;
     z: number;
     constructor(x: number, y:number, z: number){
-        this.x = x,
-        this.y = y,
-        this.z = z
+        this.x = x;
+        this.y = y;
+        this.z = z;
     }
 
     toString(){
