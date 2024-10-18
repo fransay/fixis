@@ -1,2 +1,4 @@
-node_modules
-*sandbox/
+*.exe
+.idea/
+node_modules/
+sandbox/
