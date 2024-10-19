@@ -2,12 +2,12 @@ import { Position } from "./position";
 
 // Displacement defines a vector quantity representing the change in position
 class Displacement{
-    stnA: Position;
-    stnB : Position;
+    firstPoint: Position;
+    secondPoint : Position;
     
-    constructor(stnA: Position, stnB: Position){
-        this.stnA = stnA;
-        this.stnB = stnB;
+    constructor(firstPoint: Position, secondPoint: Position){
+        this.firstPoint = firstPoint;
+        this.secondPoint = secondPoint;
     }
 
     find(): number{
